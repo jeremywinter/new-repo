@@ -27,7 +27,6 @@ h2 {
 	display: flex;
 	flex-wrap: wrap;
 }
-
 .child {
 	display: flex;	
 	flex: 50vw;
@@ -36,7 +35,7 @@ h2 {
 .hero {
 	background-image: linear-gradient(-225deg, #20E2D7 0%, #F9FEA5 100%);
 }
-
+/*sections*/
 .sec1 h2 {
 	color:#90A4AE;
 }
