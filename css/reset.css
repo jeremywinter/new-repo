@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
+/*! resent updated: 3.9.17 */
 
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -8,8 +8,15 @@
  *    IE on Windows Phone and in iOS.
  */
 
-/* Document
-   ========================================================================== */
+/*-----------------------------------------------------
+  Document
+-----------------------------------------------------*/
+/*added*/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
 html {
   font-family: sans-serif; /* 1 */
@@ -17,10 +24,15 @@ html {
   -ms-text-size-adjust: 100%; /* 3 */
   -webkit-text-size-adjust: 100%; /* 3 */
 }
-
-/* Sections
-   ========================================================================== */
-
+/*added*/
+body,h1,h2,h3,h4,h5,h6,p,blockquote,pre,dl,dd,ol,ul,fieldset,legend,figure,menu {
+  margin:0;
+  padding:0;
+  border:0;
+}
+/*-----------------------------------------------------
+  Sections
+-----------------------------------------------------*/
 /**
  * Remove the margin in all browsers (opinionated).
  */
@@ -51,10 +63,19 @@ h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
+/*added*/
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+/*added*/
+table, th, td { 
+  border-spacing:0;
+  border-collapse:collapse;
+}
 
-/* Grouping content
-   ========================================================================== */
-
+/*-----------------------------------------------------
+    Grouping content
+-----------------------------------------------------*/
 /**
  * Add the correct display in IE 9-.
  * 1. Add the correct display in IE.
@@ -94,10 +115,14 @@ pre {
   font-family: monospace, monospace; /* 1 */
   font-size: 1em; /* 2 */
 }
+/*added*/
+ol, ul, li { 
+  list-style:none;
+}
 
-/* Text-level semantics
-   ========================================================================== */
-
+/*-----------------------------------------------------
+    Text-level semantics
+-----------------------------------------------------*/
 /**
  * 1. Remove the gray background on active links in IE 10.
  * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
@@ -116,6 +141,10 @@ a {
 a:active,
 a:hover {
   outline-width: 0;
+}
+/*added*/
+a:link, a:visited, a:hover, a:active {
+  text-decoration:none;
 }
 
 /**
@@ -205,9 +234,9 @@ sup {
   top: -0.5em;
 }
 
-/* Embedded content
-   ========================================================================== */
-
+/*-----------------------------------------------------
+   Embedded content
+-----------------------------------------------------*/
 /**
  * Add the correct display in IE 9-.
  */
@@ -232,6 +261,7 @@ audio:not([controls]) {
 
 img {
   border-style: none;
+  vertical-align:top
 }
 
 /**
@@ -242,9 +272,9 @@ svg:not(:root) {
   overflow: hidden;
 }
 
-/* Forms
-   ========================================================================== */
-
+/*-----------------------------------------------------
+   Forms
+-----------------------------------------------------*/
 /**
  * 1. Change the font styles in all browsers (opinionated).
  * 2. Remove the margin in Firefox and Safari.
@@ -295,7 +325,7 @@ html [type="button"], /* 1 */
 }
 
 /**
- * Remove the inner border and padding in Firefox.
+ * Removes inner padding and border in Firefox 3+.
  */
 
 button::-moz-focus-inner,
@@ -315,6 +345,52 @@ button:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
   outline: 1px dotted ButtonText;
+}
+
+/*
+* Addresses Firefox 3+ setting `line-height` on `input` using ` !important` in
+* the UA stylesheet.
+*/
+button, input {
+    line-height: normal
+}
+
+/*
+* 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+*    and `video` controls.
+* 2. Corrects inability to style clickable `input` types in iOS.
+* 3. Improves usability and consistency of cursor style between image-type
+*    `input` and others.
+* 4. Removes inner spacing in IE 7 without affecting normal text inputs.
+*    Known issue:inner spacing remains in IE 6.
+*/
+button, 
+html input[type="button"], /* 1 */
+input[type='submit'], 
+input[type='button'], 
+input[type='reset'] {
+  border:0; 
+  background:transparent;
+  cursor: pointer; /* 3 */
+  -webkit-appearance: button; /* 2 */
+  *overflow: visible; /* 4 */
+}
+
+/*
+* Re-set default cursor for disabled elements.
+*/
+button[disabled], input[disabled] {
+    cursor: default
+}
+
+/*added */
+input, textarea, select, button{
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  color: #333;
+  outline: 0;
+  vertical-align: middle;
 }
 
 /**
@@ -410,9 +486,9 @@ textarea {
   font: inherit; /* 2 */
 }
 
-/* Interactive
-   ========================================================================== */
-
+/*-----------------------------------------------------
+   Interactive
+-----------------------------------------------------*/
 /*
  * Add the correct display in IE 9-.
  * 1. Add the correct display in Edge, IE, and Firefox.
@@ -431,9 +507,9 @@ summary {
   display: list-item;
 }
 
-/* Scripting
-   ========================================================================== */
-
+/*-----------------------------------------------------
+   Scripting
+-----------------------------------------------------*/
 /**
  * Add the correct display in IE 9-.
  */
@@ -450,9 +526,9 @@ template {
   display: none;
 }
 
-/* Hidden
-   ========================================================================== */
-
+/*-----------------------------------------------------
+   Hidden
+-----------------------------------------------------*/
 /**
  * Add the correct display in IE 10-.
  */
@@ -460,3 +536,4 @@ template {
 [hidden] {
   display: none;
 }
+
